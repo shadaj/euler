@@ -4,7 +4,7 @@ package euler
 
 object Euler5 {
   def divisibleBy(num: Int): Boolean = {
-	  num % 3 == 0 && num % 4 == 0 && num % 5 == 0 && num % 7 == 0 && num % 8 == 0 && num % 9 == 0 && num % 11 == 0 && num % 13 == 0 && num % 16 == 0 && num % 17 == 0 && num % 19 == 0
+    (20 to 2 by -1).forall(num % _ == 0)
   }
 	
   def main(args: Array[String]): Unit = { 
