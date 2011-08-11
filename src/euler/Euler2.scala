@@ -2,7 +2,7 @@ package euler
 // By considering the terms in the fibonacci sequence whose values
 // do not exceed four million, find the sum of the even-valued terms.
 
-object Euler2 {
+object Euler2 extends App {
   def evenFibSum(uptil: Int) = {
     var sum = 0
     var x = 1
@@ -19,7 +19,5 @@ object Euler2 {
     sum
   }
 
-  def main(args: Array[String]) {
-    println(evenFibSum(4000000))
-  }
+  println(evenFibSum(4000000))
 }

@@ -37,7 +37,7 @@ object Euler3 extends App {
       num :: curList
     }
   }
-  
-    println(primeFactorization(600851475143L).head)
-	
+
+  println(primeFactorization(600851475143L).head)
+
 }
