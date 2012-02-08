@@ -3,21 +3,10 @@ package euler
 // do not exceed four million, find the sum of the even-valued terms.
 
 object Euler2 extends App {
-  def evenFibSum(uptil: Int) = {
-    var sum = 0
-    var x = 1
-    var y = 1
-    var numberToAdd = 0
-    while (numberToAdd < uptil) {
-      numberToAdd = x + y
-      if (numberToAdd <= uptil && numberToAdd % 2 == 0) {
-        sum += numberToAdd
-      }
-      x = y
-      y = numberToAdd
-    }
-    sum
+  def nextFib(x: Int, y: Int): Stream[Int] = {
+    x #:: nextFib(y, x+y)
   }
 
-  println(evenFibSum(4000000))
+  def fib = nextFib(1,1)
+  println(fib.takeWhile(_ <= 4000000).filter(_ % 2 == 0).sum)
 }
