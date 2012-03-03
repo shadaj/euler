@@ -8,9 +8,6 @@ object Euler4 extends App {
     numString == numString.reverse
   }
 
-  var max: Int = 0
-  for (x <- 100 to 999; y <- 100 to 999 if (isPalindrome(x * y) && x * y > max)) {
-    max = x * y
-  }
-  println(max)
+  val palindromes = for (x <- 100 to 999; y <- 100 to 999 if (isPalindrome(x * y))) yield x*y
+  println(palindromes.max)
 }
