@@ -7,19 +7,12 @@ object Euler7 extends App {
   def isPrime(num: Int) = {
     !(2 to Math.sqrt(num).toInt).exists(num % _ == 0)
   }
-  
-  def nthPrime(n: Int): Int = {
-    var found = 0
-    var i = 2
-    while (found <= n) {
-      if (isPrime(i)) {
-        found = found + 1
-      }
-      if (found < n) {
-        i = i + 1
-      }
-    }
-    i
+    
+  def nextPrimeFrom(n: Int) = {
+    Iterator.from(n + 1).find(isPrime(_)).get
   }
-  println(nthPrime(10001))
+  
+  def primes = Iterator.iterate(2)(nextPrimeFrom)
+  
+  println(primes.drop(10000).next)
 }
