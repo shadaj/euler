@@ -4,12 +4,15 @@ package euler
 
 object Euler6 extends App {
   def difference = {
-    val range = 1 to 100
+    val range = 2 to 3
     val sum = range.sum
-    val squareSum = range.reduceLeft((a, b) => a + (b * b))
+    val squareSum = range.foldLeft(0)((a, b) => a + (b * b))
     (sum * sum) - squareSum
   }
 
   println(difference)
-
 }
+
+
+
+
