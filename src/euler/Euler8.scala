@@ -25,10 +25,12 @@ package euler
 
 object Euler8 extends App {
   def largestProductOfConsecutives(sizeOfConsecutive: Int, num: String) = {
-    val numSliding = num.sliding(sizeOfConsecutive)
-    val numIntSliding = numSliding.map(_.map(c => ((c asDigit).toInt)))
-    val numProductSliding = numIntSliding.map(_.product)
-    numProductSliding.max
+    val numSlidingProduct = num.sliding(sizeOfConsecutive).map(product)
+    numSlidingProduct.max
+  }
+  
+  def product(nums: String) = {
+    nums.map(_.asDigit).product
   }
 
   println(largestProductOfConsecutives(5, """
