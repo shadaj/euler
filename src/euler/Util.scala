@@ -1,6 +1,12 @@
 package euler
 
 object Util {
+  implicit class FactorialInt(val num: Int) extends AnyVal {
+    def ! : BigInt = {
+      (BigInt(1) to num).product
+    }
+  }
+  
   def primeFactors(num: Long): List[Long] = {
     val exists = (2L to math.sqrt(num).toLong).find(num % _ == 0)
     exists match {
