@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 object Euler13 extends App {
 	val numbersUnParsed = 

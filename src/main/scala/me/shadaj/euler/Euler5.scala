@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 import Util._
 // What is the smallest number divisible by each of the numbers 1 to 20?

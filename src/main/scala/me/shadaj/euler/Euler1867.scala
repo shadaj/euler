@@ -1,8 +1,8 @@
-package euler
+package me.shadaj.euler
 
 import scala.io.Source
 
-object Euler18_67 extends App {
+object Euler1867 extends App {
   val source = Source.fromFile("prob67.txt").getLines
   val pyramid = source.map(_.split(" ")).map(_.map(_.toInt)).toIndexedSeq
 

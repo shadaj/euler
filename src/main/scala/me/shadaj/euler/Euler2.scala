@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 // By considering the terms in the fibonacci sequence whose values
 // do not exceed four million, find the sum of the even-valued terms.
 

@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 object Euler17 extends App {
   val ones = List("", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")

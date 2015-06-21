@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 // Add all the natural numbers below one thousand that are multiples of 3 or 5.
 object Euler1 extends App {

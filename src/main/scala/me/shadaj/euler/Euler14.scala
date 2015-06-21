@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 import scala.annotation.tailrec
 

@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 object Euler16 extends App {
   val twoPower = BigInt(2).pow(1000)

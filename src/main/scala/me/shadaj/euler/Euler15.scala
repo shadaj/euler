@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 object Euler15 extends App {
   implicit class FactorialInt(val num: Int) extends AnyVal {

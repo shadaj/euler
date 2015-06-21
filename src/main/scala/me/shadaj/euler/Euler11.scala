@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 object Euler11 extends App {
   def getValue(x: Int, y: Int, grid: Array[Array[Int]]) : Int = {

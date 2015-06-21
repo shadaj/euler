@@ -1,4 +1,4 @@
-package euler
+package me.shadaj.euler
 
 //A Pythagorean triplet is a set of three natural numbers, a  b  c, for which,
 //
