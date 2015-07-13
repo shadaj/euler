@@ -31,4 +31,28 @@ object Util {
       (1 - Math.pow(base, count + 1)).toInt / (1 - base)
     }.product - num
   }
+
+  def isPrime(num: Long) = {
+    num > 1 && !(2L to math.sqrt(num).toInt).exists(num % _ == 0)
+  }
+
+  def digits(num: Int) = {
+    num.toString.map(_.asDigit)
+  }
+
+  import scala.collection.mutable
+  def sieve(limit: Int): Set[Int] = {
+    var primesTo = mutable.Set(2 to limit : _*)
+    (2 to Math.sqrt(limit).toInt).foreach { n =>
+      if (primesTo.contains(n)) {
+        (n * n to limit by n).foreach(primesTo -= _)
+      }
+    }
+
+    primesTo.toSet
+  }
+
+  def numOfDigits(num: Int) = {
+    Math.log10(num).toInt + 1
+  }
 }
