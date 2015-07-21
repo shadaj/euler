@@ -42,7 +42,7 @@ object Util {
 
   import scala.collection.mutable
   def sieve(limit: Int): Set[Int] = {
-    var primesTo = mutable.Set(2 to limit : _*)
+    var primesTo = mutable.Set(2 +: (3 to limit by 2) : _*)
     (2 to Math.sqrt(limit).toInt).foreach { n =>
       if (primesTo.contains(n)) {
         (n * n to limit by n).foreach(primesTo -= _)
