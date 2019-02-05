@@ -1,7 +1,6 @@
 package me.shadaj.euler
 
 // Find the largest palindrome made from the product of two 3-digit numbers
-
 object Euler4 extends App {
   def isPalindrome(num: Int): Boolean = {
     val numString = num.toString

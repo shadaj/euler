@@ -2,4 +2,4 @@ organization := "me.shadaj"
 
 name := "euler"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.12.8"

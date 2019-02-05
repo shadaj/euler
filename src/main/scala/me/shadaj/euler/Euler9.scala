@@ -7,8 +7,6 @@ package me.shadaj.euler
 //
 //There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 //Find the product abc.
-
-
 object Euler9 extends App {
   def tripletForSum(sum: Int) = {
     val triplets = for (a <- (1 to sum).view;

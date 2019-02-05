@@ -1,7 +1,7 @@
 package me.shadaj.euler
+
 // By considering the terms in the fibonacci sequence whose values
 // do not exceed four million, find the sum of the even-valued terms.
-
 object Euler2 extends App {
   def nextFib(x: Int, y: Int): Stream[Int] = {
     x #:: nextFib(y, x+y)
